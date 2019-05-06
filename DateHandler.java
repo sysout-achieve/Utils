@@ -54,5 +54,10 @@ public class DateHandler {
         cal.setTime(date);
         return cal.get(dateType);
     }
+    
+     public static ArrayList sortDateList(ArrayList dateList){  //date Type의 Arraylist를 순서대로 정렬하여 return해줌
+        Collections.sort(dateList, (Comparator<Date>) (o1, o2) -> o1.compareTo(o2));
+        return dateList;
+    }
 
 }
